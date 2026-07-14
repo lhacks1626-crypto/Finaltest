@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-image:url('images/back.jpg');
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+img{
+    width:220px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+<audio id="welcomeVoice">
+    <source src="welcome.mp3" type="audio/mpeg">
+</audio>
+<img src="gif.gif" onclick="startTour()" style="cursor:pointer;">
+
+<script>
+function startTour() {
+    sessionStorage.setItem("playWelcome", "true");
+    window.location.href = "virtual-tour.html";
+}
+</script>
+</body>
+</html>
